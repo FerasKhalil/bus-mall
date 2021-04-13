@@ -31,19 +31,19 @@ new Vote('boots', '../images/boots.jpg');//4
 new Vote('breakfast', '../images/breakfast.jpg');//5
 new Vote('bubblegum', '../images/bubblegum.jpg');//6
 new Vote('chair', '../images/chair.jpg');//7
-new Vote('cthulhu', 'images/cthulhu.jpg');//8
-new Vote('dog-duck', 'images/dog-duck.jpg');//9
-new Vote('dragon', 'images/dragon.jpg');//10
-new Vote('pen', 'images/pen.jpg');//11
-new Vote('pet-sweep', 'images/pet-sweep.jpg');//12
-new Vote('scissors', 'images/scissors.jpg');//13
-new Vote('shark', 'images/shark.jpg');//14
-new Vote('sweep', 'images/sweep.png');//15
-new Vote('tauntaun', 'images/tauntaun.jpg');//16
-new Vote('unicorn', 'images/unicorn.jpg');//17
-new Vote('usb', 'images/usb.gif');//18
-new Vote('water-can', 'images/water-can.jpg');//19
-new Vote('wine-glass', 'images/wine-glass.jpg');//20
+new Vote('cthulhu', '../images/cthulhu.jpg');//8
+new Vote('dog-duck', '../images/dog-duck.jpg');//9
+new Vote('dragon', '../images/dragon.jpg');//10
+new Vote('pen', '../images/pen.jpg');//11
+new Vote('pet-sweep', '../images/pet-sweep.jpg');//12
+new Vote('scissors', '../images/scissors.jpg');//13
+new Vote('shark', '../images/shark.jpg');//14
+new Vote('sweep', '../images/sweep.png');//15
+new Vote('tauntaun', '../images/tauntaun.jpg');//16
+new Vote('unicorn', '../images/unicorn.jpg');//17
+new Vote('usb', '../images/usb.gif');//18
+new Vote('water-can', '../images/water-can.jpg');//19
+new Vote('wine-glass', '../images/wine-glass.jpg');//20
 console.log(Vote.allImages);
 
 function randomImage() 
