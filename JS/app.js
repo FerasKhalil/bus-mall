@@ -3,7 +3,6 @@
 let leftImage = document.getElementById('left-img');
 let middleImage = document.getElementById('middle-img');
 let rightImage = document.getElementById('right-img');
-
 let imgContainer=document.getElementById('container');
 
 let max = 25;
@@ -20,9 +19,13 @@ function Vote(name, source)
     this.source = source;
     this.voteNumber = 0;
     Vote.allImages.push(this);
+    
 }
 Vote.allImages = [];
+for(let i=0; i<allImages.length;i++)
+{
 
+}
 
 new Vote('bag', 'images/bag.jpg'); //1
 new Vote('banana', 'images/banana.jpg');//2
@@ -61,8 +64,10 @@ function render()
     while (leftIndex === middleIndex || leftIndex === rightIndex || middleIndex === rightIndex) 
     {
         leftIndex = randomImage();
+        
         middleIndex = randomImage();
         rightIndex = randomImage();
+        if(leftIndex==)
         
 
     }
@@ -78,6 +83,7 @@ function render()
     console.log(Vote.allImages[rightIndex].source);
 
        leftImage.src=Vote.allImages[leftIndex].source;
+       
        middleImage.src=Vote.allImages[middleIndex].source;
        rightImage.src=Vote.allImages[rightIndex].source;
 
@@ -116,7 +122,7 @@ function whenUserClicks(event)
         {
             results=document.createElement("li");
             lists.appendChild(results);
-            results.textContent=`${Vote.allImages[i].name} have ${Vote.allImages[i].voteNumber} vote`;
+            results.textContent=`${Vote.allImages[i].name} have ${Vote.allImages[i].voteNumber} votes, and has been seen `;
         }
 
 
