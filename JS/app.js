@@ -27,9 +27,9 @@ Vote.allImages = [];
 new Vote('bag', 'images/bag.jpg'); //1
 new Vote('banana', 'images/banana.jpg');//2
 new Vote('bathroom', 'images/bathroom.jpg');//3
-new Vote('boots', 'images/boots.jpg');//4
-new Vote('breakfast', 'images/breakfast.jpg');//5
-new Vote('bubblegum', 'images/bubblegum.jpg');//6
+new Vote('boots','images/boots.jpg');//4
+new Vote('breakfast','images/breakfast.jpg');//5
+new Vote('bubblegum','images/bubblegum.jpg');//6
 new Vote('chair', 'images/chair.jpg');//7
 new Vote('cthulhu', 'images/cthulhu.jpg');//8
 new Vote('dog-duck', 'images/dog-duck.jpg');//9
