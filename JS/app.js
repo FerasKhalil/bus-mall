@@ -17,7 +17,7 @@ let rightIndex;
 function Vote(name, source)
 {
     this.name = name;
-    this.source = `images/${name}.jpg`;
+    this.source = source;
     this.voteNumber = 0;
     Vote.allImages.push(this);
 }
@@ -37,7 +37,7 @@ new Vote('pen', 'images/pen.jpg');//11
 new Vote('pet-sweep', 'images/pet-sweep.jpg');//12
 new Vote('scissors', 'images/scissors.jpg');//13
 new Vote('shark', 'images/shark.jpg');//14
-new Vote('sweep', 'images/sweep.jpg');//15
+new Vote('sweep', 'images/sweep.png');//15
 new Vote('tauntaun', 'images/tauntaun.jpg');//16
 new Vote('unicorn', 'images/unicorn.jpg');//17
 new Vote('usb', 'images/usb.gif');//18
