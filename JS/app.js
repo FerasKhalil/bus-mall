@@ -107,7 +107,6 @@ function whenUserClicks(event)
             Vote.allImages[rightIndex].voteNumber++;
         }
         render();
-
     }
     else
     {
@@ -119,9 +118,12 @@ function whenUserClicks(event)
             lists.appendChild(results);
             results.textContent=`${Vote.allImages[i].name} have ${Vote.allImages[i].voteNumber} vote`;
         }
+
+        
         leftImage.removeEventListener('click',whenUserClicks);
         middleImage.removeEventListener('click',whenUserClicks)
         rightImage.removeEventListener('click',whenUserClicks);
     }
 
 }
+
