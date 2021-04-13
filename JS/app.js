@@ -23,6 +23,7 @@ function Vote(name, source)
 }
 Vote.allImages = [];
 
+
 new Vote('bag', 'images/bag.jpg'); //1
 new Vote('banana', 'images/banana.jpg');//2
 new Vote('bathroom', 'images/bathroom.jpg');//3
