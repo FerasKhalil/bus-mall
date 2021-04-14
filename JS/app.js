@@ -13,12 +13,17 @@ let leftIndex;
 let middleIndex;
 let rightIndex;
 
+let namesArray=[];
+let votesArray=[];
+let seenArray=[];
+
 function Vote(name, source)
 {
     this.name = name;
     this.source = source;
     this.voteNumber = 0;
     Vote.allImages.push(this);
+    this.seen=0;
     
 }
 Vote.allImages = [];
@@ -61,13 +66,8 @@ function render()
     while (leftIndex === middleIndex || leftIndex === rightIndex || middleIndex === rightIndex) 
     {
         leftIndex = randomImage();
-        
         middleIndex = randomImage();
-        rightIndex = randomImage();
-        
-        
-        
-
+       // rightIndex = randomImage();
     }
     console.log(rightIndex);
     //first image
@@ -79,12 +79,15 @@ function render()
     // third image
     console.log(Vote.allImages[rightIndex].name);
     console.log(Vote.allImages[rightIndex].source);
-
+       //first image
        leftImage.src=Vote.allImages[leftIndex].source;
-       
+       Vote.allImages[leftIndex].seen++;
+       //second image
        middleImage.src=Vote.allImages[middleIndex].source;
+       Vote.allImages[middleIndex].seen++;
+       //third image
        rightImage.src=Vote.allImages[rightIndex].source;
-
+       Vote.allImages[rightIndex].seen++;
     // console.log(leftImage+middleImage+rightImage);
 }
 render();
@@ -111,23 +114,38 @@ function whenUserClicks(event)
             Vote.allImages[rightIndex].voteNumber++;
         }
         render();
+
     }
     else
     {
-        let lists=document.getElementById("result");
-        let results;
-        for(let i=0; i<Vote.allImages.length; i++)
+        let button=document.getElementById("button");
+        button.addEventListener("click",listShow)
+        button.hidden=false;
+        for (let i = 0; i < Vote.allImages.length; i++) 
         {
-            results=document.createElement("li");
-            lists.appendChild(results);
-            results.textContent=`${Vote.allImages[i].name} have ${Vote.allImages[i].voteNumber} votes, and has been seen `;
+            votesArray.push(Vote.allImages[i].votes);
+            seenArray.push(Vote.allImages[i].seen);
+            
         }
-
-
-        leftImage.removeEventListener('click',whenUserClicks);
-        middleImage.removeEventListener('click',whenUserClicks)
-        rightImage.removeEventListener('click',whenUserClicks);
+        imgContainer.removeEventListener('click',whenUserClicks);
     }
+   
 
 }
 
+function listShow()
+{
+    let lists=document.getElementById("result");
+    let results;
+    for(let i=0; i<Vote.allImages.length; i++)
+    {
+        results=document.createElement("li");
+        lists.appendChild(results);
+        results.textContent=`${Vote.allImages[i].name} have ${Vote.allImages[i].voteNumber} votes. and was seen : ${Vote.allImages[i].seen} times `;
+    }
+
+
+    // leftImage.removeEventListener('click',whenUserClicks);
+    // middleImage.removeEventListener('click',whenUserClicks)
+    // rightImage.removeEventListener('click',whenUserClicks);
+}
