@@ -1,7 +1,8 @@
 body
 {
     margin: 20px;
-    background-color: rgb(38, 23, 54);
+    /* background-color: rgb(38, 23, 54); */
+    background-color:rgb(150, 149, 141);
     color:white;
 }
 img
@@ -9,7 +10,8 @@ img
     width: 300px;
     height: 300px;
     padding: 20px;
-    background-color:rgb(150, 149, 141);
+    background-color: rgb(38, 23, 54);
+    /* background-color:rgb(150, 149, 141); */
 }
 #container
 {
@@ -24,6 +26,8 @@ img
 }
 button
 {
-    background-color: rgb(150, 149, 141);
-    color: rgb(38, 23, 54);
+    /* background-color: rgb(150, 149, 141);
+    color: rgb(38, 23, 54); */
+    color:rgb(150, 149, 141);
+    background-color: rgb(38, 23, 54); 
 }

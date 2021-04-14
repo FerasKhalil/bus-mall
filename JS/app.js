@@ -127,11 +127,10 @@ function whenUserClicks(event)
             seenArray.push(Vote.allImages[i].seen);
             
         }
+        chart();
         imgContainer.removeEventListener('click',whenUserClicks);
     }
     
-   
-
 }
 
 function listShow()
@@ -144,9 +143,53 @@ function listShow()
         lists.appendChild(results);
         results.textContent=`${Vote.allImages[i].name} have ${Vote.allImages[i].voteNumber} votes. and was seen : ${Vote.allImages[i].seen} times `;
     }
-
-
     // leftImage.removeEventListener('click',whenUserClicks);
     // middleImage.removeEventListener('click',whenUserClicks)
     // rightImage.removeEventListener('click',whenUserClicks);
+}
+
+function chart()
+{
+    let charting = document.getElementById("chart").getContext("2d");
+    let chart=new Chart (charting,
+        {
+            type: 'bar',
+            data:
+            { 
+                labels: namesArray,
+                datasets: 
+                [
+                    {
+                        label: "image votes",
+                        data: votesArray,
+                        backgroundColor: [ "brown", ],
+                        borderWidth: 3 
+                    },
+                    {
+                        label: 'image seen',
+                        data: seenArray,
+                        backgroundColor: [ "rgb(38, 23, 54)",],
+                        borderWidth: 3
+                    }
+                ]
+            },
+            options: 
+            {
+                
+       // responsive: true,
+       // plugins: 
+       // {
+       //   legend:
+       //    {
+       //     position: 'top',
+       //    },
+       //   title:
+       //    {
+       //     display: true,
+       //     text: 'Chart.js Bar Chart'
+       //    }
+       // }
+            }
+    }
+        );
 }
