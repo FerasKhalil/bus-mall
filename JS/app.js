@@ -22,13 +22,16 @@ function Vote(name, source)
     this.name = name;
     this.source = source;
     this.voteNumber = 0;
-    Vote.allImages.push(this);
-    namesArray.push(this.name);
-    
     this.seen=0;
+    //for storing all data in the global array
+    Vote.allImages.push(this);
+    //for chart
+    namesArray.push(this.name);
     
 }
 Vote.allImages = [];
+
+
 
 
 new Vote('bag', 'images/bag.jpg'); //1
@@ -129,6 +132,7 @@ function whenUserClicks(event)
             seenArray.push(Vote.allImages[i].seen);
             
         }
+        
         chart();
         imgContainer.removeEventListener('click',whenUserClicks);
     }
@@ -195,3 +199,31 @@ function chart()
     }
         );
 }
+
+
+function updateStorage()
+{   
+    let stringifying=JSON.stringify(Vote.allImages);
+    console.log(stringifying);
+    //for key and value
+    localStorage.setItem("seen",stringifying);
+}
+
+
+function getData()
+{   //for getting data from the local storage
+    let data = localStorage.getItem("seen");
+    console.log(data);
+    //for converting data back to its original form
+    let normalData=JSON.parse(data);
+    console.log(normalData);
+    //because  at first the array will be empty and has no items in it
+    if(normalData!==null)
+    {
+        Vote.allImages=normalData;
+    }
+    render();
+}
+
+updateStorage();
+getData();
