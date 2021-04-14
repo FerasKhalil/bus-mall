@@ -129,6 +129,7 @@ function whenUserClicks(event)
         }
         imgContainer.removeEventListener('click',whenUserClicks);
     }
+    
    
 
 }
