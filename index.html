@@ -11,26 +11,28 @@
 
 <body>
     <header>
-        <h1><center>vote for the pictures you like</center></h1>
+        <h1>
+            <center>vote for the pictures you like</center>
+        </h1>
     </header>
     <main>
-        
+
         <div id="container">
             <img id="left-img" src="" alt="first image">
             <img id="middle-img" src="" alt="second image">
             <img id="right-img" src="" alt="third image">
         </div>
-        <br><br><button>SHOW RESULT</button><br><br>
-        <ul id="result">
+        <br><br><button id="button" hidden>SHOW RESULT</button><br><br>
+        <ul id="result"> </ul>
 
-        </ul>
-        <script src="JS/app.js"></script>
     </main>
     <footer>
-            
-        
-        
+        <div>
+            <canvas id="chart"></canvas>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="JS/app.js"></script>
 </body>
 
 </html>
