@@ -22,10 +22,7 @@ function Vote(name, source)
     
 }
 Vote.allImages = [];
-for(let i=0; i<allImages.length;i++)
-{
 
-}
 
 new Vote('bag', 'images/bag.jpg'); //1
 new Vote('banana', 'images/banana.jpg');//2
@@ -67,7 +64,8 @@ function render()
         
         middleIndex = randomImage();
         rightIndex = randomImage();
-        if(leftIndex==)
+        
+        
         
 
     }
