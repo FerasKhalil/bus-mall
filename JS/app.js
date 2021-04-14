@@ -23,6 +23,8 @@ function Vote(name, source)
     this.source = source;
     this.voteNumber = 0;
     Vote.allImages.push(this);
+    namesArray.push(this.name);
+    
     this.seen=0;
     
 }
